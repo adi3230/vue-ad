@@ -3,12 +3,12 @@ import 'firebase/firestore'
 
 //Firebase init goes here
 var config = {
-    apiKey: "AIzaSyAWQCAq5eAoFvQrRIIoJ8dSrvbyX_kaO50",
-    authDomain: "vue-ad-db1ff.firebaseapp.com",
-    databaseURL: "https://vue-ad-db1ff.firebaseio.com",
-    projectId: "vue-ad-db1ff",
-    storageBucket: "vue-ad-db1ff.appspot.com",
-    messagingSenderId: "333523055682"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
 };
 firebase.initializeApp(config);
 
