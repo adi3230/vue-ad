@@ -24,8 +24,8 @@
                     <button class="button" @click="login">Log In</button>
 
                     <div class="extras">
-                        <button @click="togglePasswordReset">Forgot Password</button><br/>
-                        <button @click="toggleForm">Create an Account</button>
+                        <a @click="togglePasswordReset">Forgot Password</a><br/>
+                        <a @click="toggleForm">Create an Account</a>
                     </div>
                 </form>
 				<form v-if="!showLoginForm && !showForgotPassword" @submit.prevent>
@@ -141,7 +141,7 @@ const fb = require('../firebaseConfig.js')
 			resetPassword() {
 				this.performingRequest = true
 
-				fb.auth.sendPasswordResetEmail(thius.passwordForm.email).then(() => {
+				fb.auth.sendPasswordResetEmail(this.passwordForm.email).then(() => {
 					this.performingRequest = false
 					this.passwordResetSuccess = true
 					this.passwordForm.email = ''
