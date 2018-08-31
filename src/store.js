@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { stat } from 'fs';
 
 Vue.use(Vuex)
 
@@ -14,7 +13,7 @@ export const store = new Vuex.Store({
     actions: {
         fetchUserProfile({commit, state}) {
 			fb.usersCollection.doc(state.currentUser.uid).get().then(res => {
-				commit('setUserProfile', res.date())
+				commit('setUserProfile', res.data())
 			})
 			/* eslint-disable */
 			.catch(err => console.log(err))
